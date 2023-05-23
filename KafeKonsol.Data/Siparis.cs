@@ -11,19 +11,26 @@ namespace KafeKonsol.Data
         public int MasaNo { get; set; }
 
         public SiparisDurum Durum { get; set; }
-        public  decimal OdenenTutar { get; set; }
+        public decimal OdenenTutar { get; set; }
 
         public DateTime AcilisZamani { get; set; } = DateTime.Now;
 
-        public DateTime? KapanisZamani { get; set; }
+        public DateTime? KapanisZamani { get; set; } //nullable olmalı cünkü masaya oturan müsterilerin kapanıs zamanı belirli değil.
 
-        List<SiparisDetay> SiparisDetaylar { get; set; } = new List<SiparisDetay>(); // new() kullanılabilir.
+        List<SiparisDetay> SiparisDetaylar { get; set; } = new List<SiparisDetay>(); // new() kullanılabilir. 
 
-        public string ToplamTutarTL { get; } = string.Empty;
+
+        public string ToplamTutarTL { get { return ToplamTutar().ToString("c2"); } }
+
+        //diğer bir gösterimi oklu yöntem.
+        //public string ToplamTutarTl=> ToplamTutar().ToString("c2");
 
         public decimal ToplamTutar()
         {
-            return 0;
+            return SiparisDetaylar.Sum(x=>x.Tutar());
         }
+
+        //diğer gösterim sekli:
+        //public decimal ToplamTutar()=> SiparisDetaylar.Sum(x=>x.Tutar());
     }
 }
