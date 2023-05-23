@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33516.290
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KafeKonsol", "KafeKonsol\KafeKonsol.csproj", "{845EF1EE-AC32-4DAA-88D1-30868A18C7BE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KafeKonsol", "KafeKonsol\KafeKonsol.csproj", "{845EF1EE-AC32-4DAA-88D1-30868A18C7BE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KafeKonsol.Data", "KafeKonsol.Data\KafeKonsol.Data.csproj", "{50397140-C0ED-4538-8FA6-EDC418ADF731}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KafeKonsol.Data", "KafeKonsol.Data\KafeKonsol.Data.csproj", "{50397140-C0ED-4538-8FA6-EDC418ADF731}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KafeArayüz", "KafeArayüz\KafeArayüz.csproj", "{F2DF5445-7227-47B2-9A02-8BD15A6FD68E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{50397140-C0ED-4538-8FA6-EDC418ADF731}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{50397140-C0ED-4538-8FA6-EDC418ADF731}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{50397140-C0ED-4538-8FA6-EDC418ADF731}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2DF5445-7227-47B2-9A02-8BD15A6FD68E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2DF5445-7227-47B2-9A02-8BD15A6FD68E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2DF5445-7227-47B2-9A02-8BD15A6FD68E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2DF5445-7227-47B2-9A02-8BD15A6FD68E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
