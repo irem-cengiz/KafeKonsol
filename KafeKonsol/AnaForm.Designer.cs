@@ -36,6 +36,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(845, 512);
             Name = "AnaForm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "AnaForm";
             ResumeLayout(false);
         }

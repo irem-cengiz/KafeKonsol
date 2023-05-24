@@ -91,7 +91,7 @@
             // 
             button1.BackColor = Color.AliceBlue;
             button1.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            button1.Location = new Point(413, 38);
+            button1.Location = new Point(494, 41);
             button1.Name = "button1";
             button1.Size = new Size(92, 30);
             button1.TabIndex = 4;
@@ -103,7 +103,7 @@
             label3.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(616, 17);
+            label3.Location = new Point(612, 17);
             label3.Name = "label3";
             label3.Size = new Size(67, 19);
             label3.TabIndex = 5;
@@ -113,7 +113,7 @@
             // 
             comboBox2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(616, 47);
+            comboBox2.Location = new Point(612, 46);
             comboBox2.Name = "comboBox2";
             comboBox2.Size = new Size(78, 23);
             comboBox2.TabIndex = 6;
@@ -123,7 +123,7 @@
             button2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             button2.BackColor = Color.AliceBlue;
             button2.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
-            button2.Location = new Point(763, 38);
+            button2.Location = new Point(797, 37);
             button2.Name = "button2";
             button2.Size = new Size(95, 32);
             button2.TabIndex = 7;
@@ -135,7 +135,7 @@
             button3.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             button3.BackColor = Color.Crimson;
             button3.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            button3.Location = new Point(630, 398);
+            button3.Location = new Point(616, 398);
             button3.Name = "button3";
             button3.Size = new Size(117, 60);
             button3.TabIndex = 8;
@@ -147,9 +147,9 @@
             button4.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             button4.BackColor = Color.LimeGreen;
             button4.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            button4.Location = new Point(775, 398);
+            button4.Location = new Point(770, 398);
             button4.Name = "button4";
-            button4.Size = new Size(117, 60);
+            button4.Size = new Size(122, 60);
             button4.TabIndex = 9;
             button4.Text = "ÖDEME AL";
             button4.UseVisualStyleBackColor = false;
@@ -159,9 +159,9 @@
             button5.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             button5.BackColor = Color.AliceBlue;
             button5.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            button5.Location = new Point(634, 464);
+            button5.Location = new Point(616, 464);
             button5.Name = "button5";
-            button5.Size = new Size(258, 47);
+            button5.Size = new Size(276, 47);
             button5.TabIndex = 10;
             button5.Text = "ANASAYFAYA DÖN";
             button5.UseVisualStyleBackColor = false;
@@ -171,7 +171,7 @@
             label4.Anchor = AnchorStyles.Right;
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.Location = new Point(616, 320);
+            label4.Location = new Point(617, 300);
             label4.Name = "label4";
             label4.Size = new Size(103, 20);
             label4.TabIndex = 11;
@@ -227,7 +227,7 @@
             label6.Anchor = AnchorStyles.Right;
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label6.Location = new Point(751, 320);
+            label6.Location = new Point(752, 300);
             label6.Name = "label6";
             label6.Size = new Size(44, 20);
             label6.TabIndex = 13;
@@ -255,7 +255,8 @@
             Controls.Add(label1);
             MinimumSize = new Size(929, 591);
             Name = "SiparisForm";
-            Text = "Sipariş";
+            StartPosition = FormStartPosition.CenterParent;
+            Text = "Masa";
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);

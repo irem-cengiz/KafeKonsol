@@ -120,6 +120,7 @@
             Controls.Add(label2);
             Controls.Add(label1);
             Name = "UrunlerForm";
+            StartPosition = FormStartPosition.CenterParent;
             Text = "Ürünler";
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();

@@ -165,6 +165,7 @@
             ClientSize = new Size(982, 741);
             Controls.Add(splitContainer1);
             Name = "GecmisSiparislerForm";
+            StartPosition = FormStartPosition.CenterParent;
             Text = "Geçmiş Siparişler";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();

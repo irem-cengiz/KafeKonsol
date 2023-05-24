@@ -9,9 +9,9 @@ namespace KafeKonsol.Data
    public  class KafeVeri
     {
         public int MasaAdet { get; set; } =20;
-        List<Urun> Urunler { get; set; } = new();
-        List<Siparis> AktifSiparisler { get; set; } = new();
-        List<Siparis> GecmisSiparisler { get; set; } = new();
+        public List<Urun> Urunler { get; set; } = new();
+        public List<Siparis> AktifSiparisler { get; set; } = new();
+        public List<Siparis> GecmisSiparisler { get; set; } = new();
 
     }
 }
