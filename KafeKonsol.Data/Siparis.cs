@@ -17,7 +17,7 @@ namespace KafeKonsol.Data
 
         public DateTime? KapanisZamani { get; set; } //nullable olmalı cünkü masaya oturan müsterilerin kapanıs zamanı belirli değil.
 
-        List<SiparisDetay> SiparisDetaylar { get; set; } = new List<SiparisDetay>(); // new() kullanılabilir. 
+        public List<SiparisDetay> SiparisDetaylar { get; set; } = new List<SiparisDetay>(); // new() kullanılabilir. 
 
 
         public string ToplamTutarTL { get { return ToplamTutar().ToString("c2"); } }

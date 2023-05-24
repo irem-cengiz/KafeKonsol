@@ -10,8 +10,16 @@ namespace KafeArayüz
         public AnaForm()
         {
             InitializeComponent();
+            OrnekUrunleriYukle();
             MasalariYukle();
         }
+
+        private void OrnekUrunleriYukle()
+        {
+            db.Urunler.Add(new Urun() { UrunAd = "Kola", BirimFiyat = 20m });
+            db.Urunler.Add(new Urun() { UrunAd = "Ayran", BirimFiyat = 15m });
+        }
+       
 
         private void MasalariYukle()
         {
@@ -26,7 +34,7 @@ namespace KafeArayüz
 
         private void lvwMasalar_DoubleClick(object sender, EventArgs e)
         {
-            
+           
             var lviTiklanan = lvwMasalar.SelectedItems[0];
             /*MessageBox.Show(lviTiklanan.Text); */ //tıklanıp tıklanmadıgını kontrol için kulllanabiliriz.
             int masaNo = (int)lviTiklanan.Tag;
@@ -41,10 +49,16 @@ namespace KafeArayüz
                 db.AktifSiparisler.Add(siparis);    
             }
 
-            //siparisform u bu siparis nesnesiyle birlite aç.
+            //siparisform u bu siparis nesnesiyle birlikte aç.
 
-            var frmSiparis = new SiparisForm();
+            var frmSiparis = new SiparisForm(db, siparis);
             frmSiparis.ShowDialog();
+
+            if (siparis.Durum!= SiparisDurum.Aktif)
+            {
+                lviTiklanan.ImageKey = "bos";
+            }
+         
         }
     }
 }

@@ -13,9 +13,9 @@ namespace KafeKonsol.Data
         public decimal BirimFiyat { get; set; }
 
         public int Adet { get; set; }
-        public override string? ToString()
+        public override string ToString()
         {
-            return base.ToString();
+            return UrunAd + " " + BirimFiyat.ToString("c2");
         }
     }
 }
