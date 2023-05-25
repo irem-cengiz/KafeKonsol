@@ -28,64 +28,36 @@
         /// </summary>
         private void InitializeComponent()
         {
-            dataGridView1 = new DataGridView();
-            MasaNo = new DataGridViewTextBoxColumn();
-            AcilisZamani = new DataGridViewTextBoxColumn();
-            Durum = new DataGridViewTextBoxColumn();
-            OdenenTutar = new DataGridViewTextBoxColumn();
-            ToplamTutarTL = new DataGridViewTextBoxColumn();
+            dgvSiparisler = new DataGridView();
             label1 = new Label();
             label2 = new Label();
-            dataGridView2 = new DataGridView();
-            UrunAd = new DataGridViewTextBoxColumn();
-            BirimFiyat = new DataGridViewTextBoxColumn();
-            Adet = new DataGridViewTextBoxColumn();
-            TutarTL = new DataGridViewTextBoxColumn();
+            dgvDetaylar = new DataGridView();
             splitContainer1 = new SplitContainer();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvSiparisler).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvDetaylar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)splitContainer1).BeginInit();
             splitContainer1.Panel1.SuspendLayout();
             splitContainer1.Panel2.SuspendLayout();
             splitContainer1.SuspendLayout();
             SuspendLayout();
             // 
-            // dataGridView1
+            // dgvSiparisler
             // 
-            dataGridView1.BackgroundColor = SystemColors.ActiveCaption;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { MasaNo, AcilisZamani, Durum, OdenenTutar, ToplamTutarTL });
-            dataGridView1.Dock = DockStyle.Bottom;
-            dataGridView1.Location = new Point(0, 43);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(916, 292);
-            dataGridView1.TabIndex = 0;
-            // 
-            // MasaNo
-            // 
-            MasaNo.HeaderText = "MasaNo";
-            MasaNo.Name = "MasaNo";
-            // 
-            // AcilisZamani
-            // 
-            AcilisZamani.HeaderText = "AcilisZamani";
-            AcilisZamani.Name = "AcilisZamani";
-            // 
-            // Durum
-            // 
-            Durum.HeaderText = "Durum";
-            Durum.Name = "Durum";
-            // 
-            // OdenenTutar
-            // 
-            OdenenTutar.HeaderText = "OdenenTutar";
-            OdenenTutar.Name = "OdenenTutar";
-            // 
-            // ToplamTutarTL
-            // 
-            ToplamTutarTL.HeaderText = "ToplamTutarTL";
-            ToplamTutarTL.Name = "ToplamTutarTL";
+            dgvSiparisler.AllowUserToAddRows = false;
+            dgvSiparisler.AllowUserToDeleteRows = false;
+            dgvSiparisler.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            dgvSiparisler.BackgroundColor = SystemColors.ActiveCaption;
+            dgvSiparisler.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvSiparisler.Location = new Point(3, 49);
+            dgvSiparisler.MultiSelect = false;
+            dgvSiparisler.Name = "dgvSiparisler";
+            dgvSiparisler.ReadOnly = true;
+            dgvSiparisler.RowHeadersVisible = false;
+            dgvSiparisler.RowTemplate.Height = 25;
+            dgvSiparisler.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvSiparisler.Size = new Size(916, 292);
+            dgvSiparisler.TabIndex = 0;
+            dgvSiparisler.SelectionChanged += dgvSiparisler_SelectionChanged;
             // 
             // label1
             // 
@@ -107,37 +79,22 @@
             label2.TabIndex = 2;
             label2.Text = "Sipariş Detayları";
             // 
-            // dataGridView2
+            // dgvDetaylar
             // 
-            dataGridView2.BackgroundColor = SystemColors.ActiveCaption;
-            dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView2.Columns.AddRange(new DataGridViewColumn[] { UrunAd, BirimFiyat, Adet, TutarTL });
-            dataGridView2.Dock = DockStyle.Bottom;
-            dataGridView2.Location = new Point(0, 51);
-            dataGridView2.Name = "dataGridView2";
-            dataGridView2.RowTemplate.Height = 25;
-            dataGridView2.Size = new Size(916, 283);
-            dataGridView2.TabIndex = 3;
-            // 
-            // UrunAd
-            // 
-            UrunAd.HeaderText = "UrunAd";
-            UrunAd.Name = "UrunAd";
-            // 
-            // BirimFiyat
-            // 
-            BirimFiyat.HeaderText = "BirimFiyat";
-            BirimFiyat.Name = "BirimFiyat";
-            // 
-            // Adet
-            // 
-            Adet.HeaderText = "Adet";
-            Adet.Name = "Adet";
-            // 
-            // TutarTL
-            // 
-            TutarTL.HeaderText = "TutarTL";
-            TutarTL.Name = "TutarTL";
+            dgvDetaylar.AllowUserToAddRows = false;
+            dgvDetaylar.AllowUserToDeleteRows = false;
+            dgvDetaylar.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            dgvDetaylar.BackgroundColor = SystemColors.ActiveCaption;
+            dgvDetaylar.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvDetaylar.Location = new Point(0, 51);
+            dgvDetaylar.MultiSelect = false;
+            dgvDetaylar.Name = "dgvDetaylar";
+            dgvDetaylar.ReadOnly = true;
+            dgvDetaylar.RowHeadersVisible = false;
+            dgvDetaylar.RowTemplate.Height = 25;
+            dgvDetaylar.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvDetaylar.Size = new Size(916, 283);
+            dgvDetaylar.TabIndex = 3;
             // 
             // splitContainer1
             // 
@@ -147,12 +104,12 @@
             // 
             // splitContainer1.Panel1
             // 
-            splitContainer1.Panel1.Controls.Add(dataGridView1);
+            splitContainer1.Panel1.Controls.Add(dgvSiparisler);
             splitContainer1.Panel1.Controls.Add(label1);
             // 
             // splitContainer1.Panel2
             // 
-            splitContainer1.Panel2.Controls.Add(dataGridView2);
+            splitContainer1.Panel2.Controls.Add(dgvDetaylar);
             splitContainer1.Panel2.Controls.Add(label2);
             splitContainer1.Size = new Size(916, 673);
             splitContainer1.SplitterDistance = 335;
@@ -162,13 +119,13 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(982, 741);
+            ClientSize = new Size(977, 724);
             Controls.Add(splitContainer1);
             Name = "GecmisSiparislerForm";
             StartPosition = FormStartPosition.CenterParent;
             Text = "Geçmiş Siparişler";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvSiparisler).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvDetaylar).EndInit();
             splitContainer1.Panel1.ResumeLayout(false);
             splitContainer1.Panel1.PerformLayout();
             splitContainer1.Panel2.ResumeLayout(false);
@@ -180,19 +137,10 @@
 
         #endregion
 
-        private DataGridView dataGridView1;
-        private DataGridViewTextBoxColumn MasaNo;
-        private DataGridViewTextBoxColumn AcilisZamani;
-        private DataGridViewTextBoxColumn Durum;
-        private DataGridViewTextBoxColumn OdenenTutar;
-        private DataGridViewTextBoxColumn ToplamTutarTL;
+        private DataGridView dgvSiparisler;
         private Label label1;
         private Label label2;
-        private DataGridView dataGridView2;
-        private DataGridViewTextBoxColumn UrunAd;
-        private DataGridViewTextBoxColumn BirimFiyat;
-        private DataGridViewTextBoxColumn Adet;
-        private DataGridViewTextBoxColumn TutarTL;
+        private DataGridView dgvDetaylar;
         private SplitContainer splitContainer1;
     }
 }

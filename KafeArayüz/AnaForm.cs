@@ -19,7 +19,6 @@ namespace KafeArayüz
             db.Urunler.Add(new Urun() { UrunAd = "Kola", BirimFiyat = 20m });
             db.Urunler.Add(new Urun() { UrunAd = "Ayran", BirimFiyat = 15m });
         }
-       
 
         private void MasalariYukle()
         {
@@ -34,7 +33,7 @@ namespace KafeArayüz
 
         private void lvwMasalar_DoubleClick(object sender, EventArgs e)
         {
-           
+
             var lviTiklanan = lvwMasalar.SelectedItems[0];
             /*MessageBox.Show(lviTiklanan.Text); */ //tıklanıp tıklanmadıgını kontrol için kulllanabiliriz.
             int masaNo = (int)lviTiklanan.Tag;
@@ -42,11 +41,11 @@ namespace KafeArayüz
 
             //bu masa da suan oturan var mı?
             var siparis = db.AktifSiparisler.FirstOrDefault(x => x.MasaNo == masaNo); //aktif siparislerin defaultu null dır. burada diyoruz ki ilkini bulursan veya bulamazsan araması yapıyoruz. Aktif siparisler içerisinde masa no varsa o siparisi getir bulamazsa da null olsun.
-            if (siparis == null) 
+            if (siparis == null)
             {
                 lviTiklanan.ImageKey = "dolu";
-                siparis= new Siparis() { MasaNo = masaNo }; 
-                db.AktifSiparisler.Add(siparis);    
+                siparis = new Siparis() { MasaNo = masaNo };
+                db.AktifSiparisler.Add(siparis);
             }
 
             //siparisform u bu siparis nesnesiyle birlikte aç.
@@ -54,11 +53,20 @@ namespace KafeArayüz
             var frmSiparis = new SiparisForm(db, siparis);
             frmSiparis.ShowDialog();
 
-            if (siparis.Durum!= SiparisDurum.Aktif)
+            if (siparis.Durum != SiparisDurum.Aktif)
             {
                 lviTiklanan.ImageKey = "bos";
             }
-         
+
+        }
+        private void tsmiGecmisSiparisler_Click(object sender, EventArgs e)
+        {
+            new GecmisSiparislerForm(db).ShowDialog();
+        }
+
+        private void tsmiUrunler_Click(object sender, EventArgs e)
+        {
+            new UrunlerForm(db).ShowDialog();
         }
     }
 }

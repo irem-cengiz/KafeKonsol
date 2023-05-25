@@ -21,7 +21,6 @@ namespace KafeArayüz
         {
 
         }
-
         public SiparisForm(KafeVeri db, Siparis siparis)
         {
 
