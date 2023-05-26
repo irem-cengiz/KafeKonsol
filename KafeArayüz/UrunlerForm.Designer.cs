@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             label1 = new Label();
             label2 = new Label();
             txtUrunAd = new TextBox();
@@ -36,6 +37,8 @@
             dgvUrunler = new DataGridView();
             btnIptal = new Button();
             btnDuzenle = new Button();
+            UrunAd = new DataGridViewTextBoxColumn();
+            BirimFiyat = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)nudBirimFiyat).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgvUrunler).BeginInit();
             SuspendLayout();
@@ -93,6 +96,7 @@
             dgvUrunler.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             dgvUrunler.BackgroundColor = SystemColors.ActiveCaption;
             dgvUrunler.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvUrunler.Columns.AddRange(new DataGridViewColumn[] { UrunAd, BirimFiyat });
             dgvUrunler.Location = new Point(34, 135);
             dgvUrunler.MultiSelect = false;
             dgvUrunler.Name = "dgvUrunler";
@@ -126,6 +130,22 @@
             btnDuzenle.UseVisualStyleBackColor = false;
             btnDuzenle.Click += btnDuzenle_Click;
             // 
+            // UrunAd
+            // 
+            UrunAd.DataPropertyName = "UrunAd";
+            UrunAd.HeaderText = "Ürün Adı";
+            UrunAd.Name = "UrunAd";
+            UrunAd.ReadOnly = true;
+            // 
+            // BirimFiyat
+            // 
+            BirimFiyat.DataPropertyName = "BirimFiyat";
+            dataGridViewCellStyle1.Format = "c2";
+            BirimFiyat.DefaultCellStyle = dataGridViewCellStyle1;
+            BirimFiyat.HeaderText = "BirimFiyat";
+            BirimFiyat.Name = "BirimFiyat";
+            BirimFiyat.ReadOnly = true;
+            // 
             // UrunlerForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -158,5 +178,7 @@
         private DataGridView dgvUrunler;
         private Button btnIptal;
         private Button btnDuzenle;
+        private DataGridViewTextBoxColumn UrunAd;
+        private DataGridViewTextBoxColumn BirimFiyat;
     }
 }

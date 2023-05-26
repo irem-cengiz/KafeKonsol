@@ -19,7 +19,7 @@ namespace KafeArayüz
         {
             _db = db;
 
-            urunler = new BindingList<Urun>(db.Urunler);
+            urunler = new BindingList<Urun>(db.Urunler);  
             InitializeComponent();
 
             dgvUrunler.DataSource = urunler;
@@ -85,3 +85,6 @@ namespace KafeArayüz
         }
     }
 }
+
+
+//
